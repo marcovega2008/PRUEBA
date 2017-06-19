@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>RESTAURANTE</title>
+<section></section>
+</head>
+<body>	
+
+<article>RESTAURANTE YAVIRAC</article>
+			<h1>Los Motes del Yavirac</h1><br>
+			
+
+		<table border="2">
+       <tr>
+       <section>
+       	<td >
+       		<img id="img" width="100px" src="guata.gif">
+       	</td>
+       	</section>
+       	 
+        		<td>
+		       		<table width="100%" align="">
+		       		<form action="">
+		       			
+		       		
+		       			
+		       			<tr>
+		       				<td>
+		       				# de choclomotes:
+		       				
+		       					 <input  id="numeroChoclo"  size="22"  type="text" onchange="calcular()" onclick="imagen(1)"value="0"></input>
+		       				</td>
+		       			</tr>
+		       			<tr>
+		       				<td align="rigth">
+		       				# de guatitas: 
+		       					<input id="numeroGuatita" size="20" type="text" onkeyup="calcular()" onclick="imagen(2)" value="0"  ></input>
+		       				</td>
+		       			</tr>
+		       			   
+		       				<td align="rigth">
+		       				Total: 
+		       					<input id="total" size="33" type="text"></input>
+		       				</td>
+		       			</tr>
+
+		       			</form>
+		       	</table>
+       			
+       		</tr>
+      
+    </table>
+
+<script>
+function calcular() {
+	var u = 0.75;
+	var cho = document.getElementById("numeroChoclo").value;
+	var gua = document.getElementById("numeroGuatita").value;
+	 cho = parseInt(cho);
+	 gua = parseInt(gua);
+	 var l = cho + gua;
+    document.getElementById("total").value = l;
+
+   
+}
+function imagen(q){
+	if(q=='1'){
+		document.images.img.src="mote.gif";
+	}
+	if(q=='2'){
+		document.images.img.src="guata.gif";
+	}
+	
+}
+
+</script>
+</body>
+</html>
